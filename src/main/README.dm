@@ -1,14 +1,17 @@
 
-Formulario responsive con el uso de boootstrap.
+--Formulario responsive con el uso de boootstrap--
 
 
-linea 6 se usa un meta name para que el sitio responsive.
+1.se usa un meta name para que el sitio sea responsive adaptable a diversos dispositivos.
 
-linea 8 se encuentra el enlace de conexion con bootstrap para dar estilos.
+2.header con el titulo.
+3.se encuentra el enlace de conexion con bootstrap para dar estilos.
 
-linea 16  se encuentra un formulario con una clase  donde se
-define el borde con el bootstrap.
+4.estilo flex box para acomodar las partes del formulario.
 
-linea 21 a 24  se encuentran 4 inputs de tipo text con la clase form control de bootstrap.
+5.  se encuentra un formulario con una clase  donde se
+define el estilo con bootstrap.
 
-linea 28 hay un input de tipo submit con una clase btn info para darle el estiloal boton con el bootstrap.
+6. se encuentran 4 inputs de tipo text con la clase form control de bootstrap.
+
+7. hay un input de tipo submit con una clase btn info para darle el estilo al boton con el bootstrap.
