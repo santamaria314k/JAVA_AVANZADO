@@ -1,71 +1,38 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Date" %><%--
+  Created by IntelliJ IDEA.
+  User: 1
+  Date: 27/04/2023
+  Time: 8:20 p. m.
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Formulario </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>my app ixdex con bd</title>
+    <meta name="viewport" content="width=device-width,initial-scalate=1">
+    <link rel="stylesheet"href="css/styles.css">
 </head>
 <body>
-
-<header class="bg-white">
-<h1> Taller 1 - Java Web</h1>
+<header>
+    <h1>
+        my app ixdex con bd  📋
+    </h1>
+    <h1>my APP</h1>
 </header>
 
-<style>
-  input{display: flex;
-    justify-content: center;
+<img src="img/cand.jpg">
+
+<footer>
+    <p class="mt-3 mb-3 text muted">todos los derechos reservados MY APP CON BD
+            <%=displayDate()%>
+    <%! public String displayDate() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
+        Date date = Calendar.getInstance().getTime();
+        return dateFormat.format(date);
     }
-label{
-  display: flex;
-  align-items: flex-start;
-}
-
-  h1{display: flex;justify-content: center;align-items: center;}
-
-  form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-</style>
-
-<section>
-<form class="border border-primary p-5 mw-2 bg-primary"  action=""method="post">
-
-
-  <h1 class="text-dark"><%= "Formulario  " %></h1>
-
-  <label  for="name">Nombres:</label><br>
-  <input type="text" class="form-control text-center" id="name" placeholder="Ingresa tus Nombres: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
-
-  <label for="surnames">Apellidos:</label><br>
-  <input type="text" class="form-control text-center" id="surnames" placeholder="Ingresa tus Apellidos: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
-
-  <label for="email">Correo:</label><br>
-  <input type="text" class="form-control  text-center" id="email" placeholder="Ingresa tu Correo: " required autofocus pattern="{80}"><br>
-
-
-
-  <label for="password">Contraseña:</label><br>
-  <input type="password" class="form-control text-center" id="password" placeholder="Ingresa tu contraseña:" required autofocus pattern="{50}"><br><br>
-
-
-
-  <input  class="btn btn-info w-50" type="submit" value="Envio de información">
-</form>
-
-</section>
-
-
-
-
-
-<footer class="bg-info" >
-  <a href="hello-servlet">Hello Servlet</a>
-  <br/><br/><br/><br/><br/><br/><br/>
-
+    %>
 
 </footer>
 </body>
