@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/co/edu/sena/java_new_a/model/BasicConnection.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/co/edu/sena/java_new_a/model/BasicConnectionWithResources.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/co/edu/sena/java_new_a/model/UseBasicConnectionSingleton.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/co/edu/sena/java_new_a/model/UseConnectionPool.java" dialect="GenericSQL" />
-  </component>
-</project>
