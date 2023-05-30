@@ -1,8 +1,10 @@
 package co.edu.sena.java_new_a.servlets;
 
-import co.edu.sena.java_new_a.model.Beans.Product;
-import co.edu.sena.java_new_a.model.repository.ProductRepositoryImpl;
-import co.edu.sena.java_new_a.model.repository.Repositoryproduct;
+import co.edu.sena.java_new_a.model.repository.Repository;
+
+import co.edu.sena.java_new_a.model.Beans.User;
+
+import co.edu.sena.java_new_a.model.repository.UserRepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,31 +14,31 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/registerelpro")
-public class RegistreProductServlet extends HttpServlet {
-
+@WebServlet("/registeruser")
+public class RegistreUserServlet extends HttpServlet {
 
     @Override
     protected  void  doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+    response.setContentType("text/html");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Collect all form data
-        Integer id_product = Integer.valueOf(request.getParameter("id_product"));
-        String name_product = request.getParameter("name_product");
-        String value_product = request.getParameter("value_product");
+        String user_firstname = request.getParameter("user_firstname");
+        String user_lastname = request.getParameter("user_lastname");
+        String user_email = request.getParameter("user_email");
+        String user_password = request.getParameter("user_password");
 
         // Fill it up in a User bean
-        Product prop = new Product(id_product,name_product, value_product);
+        User user = new User(user_firstname, user_lastname, user_email, user_password);
         // Call Repository layer and save the user object to DB
 
-        Repositoryproduct<Product> therepo = new ProductRepositoryImpl();
+        Repository<User> repository = new UserRepositoryImpl();
         int rows = 0;
 
         try {
-            rows = therepo.saveprod(prop);
+            rows = repository.saveObj(user);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -53,9 +55,4 @@ public class RegistreProductServlet extends HttpServlet {
 
     }
 }
-
-
-
-
-
 

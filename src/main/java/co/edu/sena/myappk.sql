@@ -5,6 +5,8 @@ drop database myappk;
 
 
 select * from users_tbl;
+select * from categories;
+select * from products;
 -------------------------------------------------------------------
 CREATE TABLE `users_tbl` (
 `user_id` int  auto_increment,
@@ -18,20 +20,20 @@ PRIMARY KEY (`user_id`)
 -------------------------------------------------------------------
 
 CREATE TABLE `categories` (
-`category_id` int    auto_increment,
-`category_name` varchar(40) NOT NULL,
-PRIMARY KEY (`category_id`)
+`category_product` int    ,
+`name_category` varchar(40) NOT NULL,
+PRIMARY KEY (`category_product`)
 ) ;
-
 ----------------------------------------------------------------------------
 
 CREATE TABLE `products` (
-`product_id` int    auto_increment,
-`product-_name` varchar(40) NOT NULL,
-`product_value` varchar(40) NOT NULL,
-`category_id` int ,
-PRIMARY KEY (`product_id`),FOREIGN KEY (`category_id`) REFERENCES `categories`(`category_id`)
+`id_product` int    ,
+`name_product` varchar(40) NOT NULL,
+`value_product` varchar(40) NOT NULL,
+`category_product` int ,
+PRIMARY KEY (`id_product`),FOREIGN KEY (`category_product`) REFERENCES `categories`(`category_product`)
 ) ;
+
 
 
 ----------------------------------------------------------------------
@@ -52,3 +54,9 @@ VALUES (('2'),UPPER('kevi'), UPPER('stiven'), 'kevsan@correo.com',AES_ENCRYPT('k
 SELECT *,CAST(AES_DECRYPT(user_password,
 '$2a$12$71SJ2B6qdXDQrZUF4KR5suDytQ062kLQf/QHbatSw8wLqu1DoMppm') AS CHAR(50))
 end_data FROM users_tbl WHERE user_id = 2;
+
+
+
+
+
+

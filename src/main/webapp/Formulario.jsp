@@ -19,24 +19,24 @@
 
 
 <section>
-    <form class="form"  action=""method="post">
+    <form class="form" action="registeruser" method="post">
 
 
         <h1 class="text-dark"> 🌐"Formulario con BD " </h1>
 
         <label  for="name">Nombres:</label><br>
-        <input type="text" class="form-control " id="name" placeholder="Ingresa tus Nombres: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
+        <input type="text" name="user_firstname" class="form-control " id="name" placeholder="Ingresa tus Nombres: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
 
         <label for="surnames">Apellidos:</label><br>
-        <input type="text" class="form-control " id="surnames" placeholder="Ingresa tus Apellidos: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
+        <input type="text" name="user_lastname" class="form-control " id="surnames" placeholder="Ingresa tus Apellidos: " required autofocus pattern="[A-Za-z ]{2,40}"><br>
 
         <label for="email">Correo:</label><br>
-        <input type="text" class="form-control  " id="email" placeholder="Ingresa tu Correo: " required autofocus pattern="{80}"><br>
+        <input type="text" name="user_email" class="form-control  " id="email" placeholder="Ingresa tu Correo: " required autofocus pattern="{80}"><br>
 
 
 
         <label for="password">Contraseña:</label><br>
-        <input type="password" class="form-control " id="password" placeholder="Ingresa tu contraseña:" required autofocus pattern="{50}"><br><br>
+        <input type="password" name="user_password" class="form-control " id="password" placeholder="Ingresa tu contraseña:" required autofocus pattern="{50}"><br><br>
 
 
 

@@ -1,4 +1,4 @@
-package co.edu.sena.java_new_a.model;
+package co.edu.sena.java_new_a.model.util;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ public class UseBasicConnectionSingleton {
     public static void main(String[] args) throws SQLException {
         try (Connection conn = BasicConnectionSingleton.getInstance();
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT * FROM my_app.users_tbl")) {
+             ResultSet rs = stmt.executeQuery("SELECT * FROM myappk.users_tbl")) {
 
             while (rs.next()) {
                 System.out.print(rs.getString("user_firstname"));

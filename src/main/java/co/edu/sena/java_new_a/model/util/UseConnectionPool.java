@@ -1,4 +1,4 @@
-package co.edu.sena.java_new_a.model;
+package co.edu.sena.java_new_a.model.util;
 
 
 import java.sql.Connection;
