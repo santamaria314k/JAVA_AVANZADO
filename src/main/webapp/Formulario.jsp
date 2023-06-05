@@ -36,8 +36,13 @@
 
 
 
+<<<<<<< HEAD
         <label for="password">Contrasena:</label><br>
         <input type="password" name="user_password" class="form-control " id="password" placeholder="Ingresa tu contrasena:" required autofocus pattern="{50}"><br><br>
+=======
+        <label for="password">Contraseña:</label><br>
+        <input type="password" name="user_password" class="form-control " id="password" placeholder="Ingresa tu contraseña:" required autofocus pattern="{50}"><br><br>
+>>>>>>> 0d4e91c1522c1f32b20f9ac8c26f9e8f43c194be
 
 
 
