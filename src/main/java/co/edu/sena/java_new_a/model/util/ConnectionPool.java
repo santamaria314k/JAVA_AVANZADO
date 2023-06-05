@@ -1,4 +1,4 @@
-package co.edu.sena.java_new_a.model;
+package co.edu.sena.java_new_a.model.util;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 import java.sql.Connection;
@@ -27,4 +27,5 @@ public class ConnectionPool {
     public static Connection getConnection() throws SQLException {
         return getInstance().getConnection();
     }
+
 }

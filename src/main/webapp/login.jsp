@@ -1,7 +1,6 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Calendar" %>
 <%@ page import="java.util.Date" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE   >
 <html>
@@ -26,8 +25,12 @@
 </head>
 
 <body class="text-center">
-<main class="form-signing w-100 m-auto">
+
+
+<main class="form-signing w-50 m-auto">
+
     <form action="" method="post">
+
         <img class="mb-4" src="img/icon.png" alt="MY APP" width="100">
 
         <h4 class="text-secondary">MY APP CON BD </h4>
@@ -47,22 +50,22 @@
         </div>
         <br><br>
         <div class="form-floating">
-            <div class="label">  <label  for="floatingPassword">Contraseña:</label></div><br>
-            <input type="password" class="form-signin  "    id="floatingPassword" placeholder="ingrese su contraseña" required pattern="[A-Za-z0-9]{8,12}">
+            <div class="label">  <label  for="floatingPassword">Contrasena:</label></div><br>
+            <input type="password" class="form-signin  "    id="floatingPassword" placeholder="ingrese su contrasen a" required pattern="[A-Za-z0-9]{8,12}">
             <i class="bi bi-key-fill"></i>
         </div>
         <br>
         <button class="btn btn-info " type="submit" >Ingresar</button>
 
         <div id="register">
+            <br>
             <a href="#">Registrarse</a>
         </div>
 
-<br><br><br>
+        <%@ include file="footer.jsp"%>
 
-        <p class="mt-3 mb-3 text muted">todos los derechos reservados MY APP CON BD
-        <%=displayDate()%>
-            <br><br><br><br></p>
+
+
 
 </form>
 </main>
@@ -70,14 +73,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
-
-
-<%! public String displayDate() {
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
-    Date date = Calendar.getInstance().getTime();
-    return dateFormat.format(date);
-}
-%>
 
 
 
